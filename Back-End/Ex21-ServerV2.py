@@ -29,7 +29,7 @@ async def msg_from(name,msg):  #Manda msg do name para todos menos para ele
                 await names_users[key].send(message)
 
 async def notify_wellcome(websocket):
-    message = send_message("Seja bem vindo! Digite seu nome no campo de mensagem e clique em Enviar","Chat")
+    message = send_message("Seja bem vindo, digite seu nome no campo de mensagem e clique em Enviar","Chat")
     await websocket.send(message)
 
 async def notify_wellcome_for_all(name):
