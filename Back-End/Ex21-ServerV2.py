@@ -90,7 +90,7 @@ async def chat(websocket, path):
                 if (data["to"] in names_users):
                     await msg_to(names_users[data["to"]],data["message"], (data["user"]+"-Privado"))
                 else:
-                    await msg_to(websocket,data["message"], "Chat")
+                    await msg_to(websocket,"Usuário '" + data["to"] + "' não existe!", "Chat")
     finally:
         await unregister(websocket)
 

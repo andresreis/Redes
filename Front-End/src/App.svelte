@@ -35,7 +35,7 @@
 	function handlePrivateClick(){
 		if (name != ""){
 			ws.send(JSON.stringify({type:"private", message:inputPrivateText, user:name, to:inputName}));
-			messages = [...messages, "Enviado para "+ inputName+ " : " + inputText];
+			messages = [...messages, "Enviado para "+ inputName+ " : " + inputPrivateText];
 		}
 		inputPrivateText = "";
 		inputName = "";
